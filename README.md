@@ -1,6 +1,6 @@
 # Hard Planetary Logistics
 
-Adds surface condition requirements for recipes and buildings, making "Make-Everything" malls less centralized and making the loss of Nauvis a critical blow to research capabilities. This mod is part of the **Space Age: Hard Mode** collection.
+Adds surface condition requirements for recipes and buildings, making "Make-Everything" malls less centralized and making the loss of Nauvis a critical blow to research capabilities. This mod is optional part of the **Space Age: Hard Mode** collection.
 
 ### Key Changes
 
