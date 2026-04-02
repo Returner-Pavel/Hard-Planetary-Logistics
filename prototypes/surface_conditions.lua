@@ -45,3 +45,14 @@ function Public.add_surface(planet, surface_conditions)
 
     return true
 end
+
+--- @param planet LuaPlanet
+--- @param surface_conditions SurfaceCondition 
+--- @return boolean
+function Public.delete_surface(planet, surface_conditions)
+    if planet and planet.valid then return false end
+
+    lib.delete(Public.surface_conditions, planet.name)
+
+    return true
+end
