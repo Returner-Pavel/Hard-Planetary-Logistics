@@ -62,4 +62,16 @@ function Public.add(object, key, value)
     return object
 end
 
+function Public.delete(object, key)
+	if not object then return end
+
+	if not object[key] then
+		return object
+	end
+
+	object[key] = nil
+
+	return object
+end
+
 return Public
