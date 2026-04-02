@@ -1,9 +1,10 @@
 local lib = require("lib")
 
 
-local Public
+local Local
 
-Public.surface_conditions = {
+--- @private
+Local.surface_conditions = {
     nauvis = {
         property = "pressure",
         min = 1000,
@@ -35,24 +36,38 @@ Public.surface_conditions = {
     }
 }
 
+
+local Public
+
 --- @param planet LuaPlanet
 --- @param surface_conditions SurfaceCondition 
 --- @return boolean
 function Public.add_surface(planet, surface_conditions)
     if planet and planet.valid then return false end
 
-    lib.add(Public.surface_conditions, planet.name, surface_conditions)
+    lib.add(Local.surface_conditions, planet.name, surface_conditions)
 
     return true
 end
 
 --- @param planet LuaPlanet
---- @param surface_conditions SurfaceCondition 
 --- @return boolean
-function Public.delete_surface(planet, surface_conditions)
+function Public.delete_surface(planet)
     if planet and planet.valid then return false end
 
-    lib.delete(Public.surface_conditions, planet.name)
+    lib.delete(Local.surface_conditions, planet.name)
 
     return true
 end
+
+--- @param planet LuaPlanet
+--- @return SurfaceCondition|false
+function Public.read_table_surface(planet)
+    if planet and planet.valid then return false end
+
+    if not Local.surface_conditions[planet.name] then return false end
+
+    return Local.surface_conditions[planet.name]
+end
+
+return Public
