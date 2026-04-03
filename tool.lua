@@ -2,6 +2,6 @@ local surface_conditions = require("__Hard-Planetary-Logistics__.tools.surface-c
 
 local Tools = {}
 
-Tools["surface_conditions"] = surface_conditions
+Tools["surface_conditions_v1"] = surface_conditions
 
 return Tools
