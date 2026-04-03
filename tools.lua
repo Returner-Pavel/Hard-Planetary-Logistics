@@ -2,6 +2,6 @@ local surface_conditions_v1 = require("__Hard-Planetary-Logistics__.tools.surfac
 
 local Tools = {}
 
-Tools.surface_conditions_v1 = surface_conditions
+Tools.surface_conditions_v1 = surface_conditions_v1
 
 return Tools
