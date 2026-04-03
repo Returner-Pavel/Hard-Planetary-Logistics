@@ -1,9 +1,10 @@
 local lib = require("lib")
 
 
-local Local
+local Surface_conditions = {}
+local Local = {}
 
---- @private
+--- @type table<string, SurfaceCondition>
 Local.surface_conditions = { -- Нужно будет переделать для нескольких условий
     nauvis = {
         property = "pressure",
@@ -22,6 +23,7 @@ Local.surface_conditions = { -- Нужно будет переделать дл�
     },
     fulgora = {
         property = "magnetic-field",
+        max = 100,
         min = 99,
     },
     aquilo = {
@@ -36,7 +38,6 @@ Local.surface_conditions = { -- Нужно будет переделать дл�
     }
 }
 
-local Surface_conditions
 
 --- @param planet LuaPlanet
 --- @param surface_conditions SurfaceCondition 
