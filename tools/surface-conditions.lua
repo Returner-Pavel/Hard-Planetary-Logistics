@@ -36,13 +36,12 @@ Local.surface_conditions = { -- Нужно будет переделать дл�
     }
 }
 
-
-local Public
+local Surface_conditions
 
 --- @param planet LuaPlanet
 --- @param surface_conditions SurfaceCondition 
 --- @return boolean
-function Public.add_surface(planet, surface_conditions)
+function Surface_conditions.add(planet, surface_conditions)
     if planet and planet.valid then return false end
 
     if not Local.surface_conditions[planet.name] then return false end
@@ -54,7 +53,7 @@ end
 
 --- @param planet LuaPlanet
 --- @return boolean
-function Public.delete_surface(planet)
+function Surface_conditions.delete(planet)
     if planet and planet.valid then return false end
 
     if Local.surface_conditions[planet.name] then return false end
@@ -66,7 +65,7 @@ end
 
 --- @param planet LuaPlanet
 --- @return SurfaceCondition|false
-function Public.read_table_surface(planet)
+function Surface_conditions.read_table(planet)
     if planet and planet.valid then return false end
 
     if not Local.surface_conditions[planet.name] then return false end
@@ -77,7 +76,7 @@ end
 --- @param planet LuaPlanet
 --- @param surface_conditions SurfaceCondition 
 --- @return SurfaceCondition|false
-function Public.edit_table_surface(planet, surface_conditions)
+function Surface_conditions.edit_table(planet, surface_conditions)
     if planet and planet.valid then return false end
 
     if not Local.surface_conditions[planet.name] then return false end
@@ -87,4 +86,4 @@ function Public.edit_table_surface(planet, surface_conditions)
     return Local.surface_conditions[planet.name]
 end
 
-return Public
+return Surface_conditions
