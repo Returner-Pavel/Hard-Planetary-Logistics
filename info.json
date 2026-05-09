@@ -10,7 +10,6 @@
     "space_travel_required": true,
     "dependencies": [
         "base >= 2.0.0",
-        "space-age >= 2.0.0",
-        "? Space-Age-Hardcore-Mode"
+        "space-age >= 2.0.0"
     ]
 }
