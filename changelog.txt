@@ -2,6 +2,7 @@
 Version: 26.3.3
 Date: ????
   Changes:
+    - Update to info.json for fixing cyclic dependency in the Space Age Hard Mode mod.
 ---------------------------------------------------------------------------------------------------
 Version: 26.3.2
 Date: 2026-04-09
